@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Playground</h1>
+    </header>
+
+    <main>
+        <!-- Event Handling Section -->
+        <section id="event-section">
+            <h2>Event Handling</h2>
+            
+            <div class="event-box">
+                <button id="click-btn" class="interactive-btn">Click Me!</button>
+                <p id="click-output">Button not clicked yet</p>
+            </div>
+            
+            <div class="event-box hover-box">
+                <p>Hover over me!</p>
+                <div id="hover-effect"></div>
+            </div>
+            
+            <div class="event-box">
+                <input type="text" id="keypress-input" placeholder="Type something...">
+                <p id="keypress-output">Key presses: 0</p>
+            </div>
+            
+            <div class="event-box secret-box">
+                <p>Double click or long press for a secret!</p>
+                <p id="secret-output"></p>
+            </div>
+        </section>
+
+        <!-- Interactive Elements Section -->
+        <section id="interactive-section">
+            <h2>Interactive Elements</h2>
+            
+            <div class="interactive-box">
+                <button id="color-changer" class="interactive-btn">Change My Color</button>
+            </div>
+            
+            <div class="interactive-box">
+                <div class="gallery">
+                    <img src="https://picsum.photos/id/237/400/300" alt="Gallery image 1" class="gallery-img active">
+                    <img src="https://picsum.photos/id/238/400/300" alt="Gallery image 2" class="gallery-img">
+                    <img src="https://picsum.photos/id/239/400/300" alt="Gallery image 3" class="gallery-img">
+                    <div class="gallery-controls">
+                        <button id="prev-btn" class="gallery-btn">←</button>
+                        <button id="next-btn" class="gallery-btn">→</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="interactive-box">
+                <div class="tabs">
+                    <div class="tab-header">
+                        <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                        <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                        <button class="tab-btn" data-tab="tab3">Tab 3</button>
+                    </div>
+                    <div class="tab-content active" id="tab1">
+                        <h3>Content for Tab 1</h3>
+                        <p>This is the first tab content.</p>
+                    </div>
+                    <div class="tab-content" id="tab2">
+                        <h3>Content for Tab 2</h3>
+                        <p>This tab has different content.</p>
+                    </div>
+                    <div class="tab-content" id="tab3">
+                        <h3>Content for Tab 3</h3>
+                        <p>Third tab content goes here.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Validation Section -->
+        <section id="form-section">
+            <h2>Form Validation</h2>
+            
+            <form id="validation-form">
+                <div class="form-group">
+                    <label for="name">Name (required)</label>
+                    <input type="text" id="name" name="name">
+                    <span class="error-message" id="name-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                    <span class="error-message" id="email-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password (min 8 chars)</label>
+                    <input type="password" id="password" name="password">
+                    <span class="error-message" id="password-error"></span>
+                    <div class="password-strength">
+                        <span class="strength-meter" id="strength-meter"></span>
+                        <span id="strength-text">Password strength</span>
+                    </div>
+                </div>
+                
+                <button type="submit" class="interactive-btn">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>JavaScript Event Handling Assignment</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
